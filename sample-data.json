@@ -1,0 +1,462 @@
+{
+  "info": "Fallback data for API Widget Builder - offline testing support",
+  "lastUpdated": "2024-12-19",
+
+  "weatherData": {
+    "london": {
+      "name": "London",
+      "country": "GB",
+      "temp": 15,
+      "feelsLike": 13,
+      "humidity": 72,
+      "windSpeed": 3.2,
+      "pressure": 1013,
+      "description": "partly cloudy",
+      "icon": "02d"
+    },
+    "paris": {
+      "name": "Paris",
+      "country": "FR",
+      "temp": 18,
+      "feelsLike": 16,
+      "humidity": 65,
+      "windSpeed": 2.8,
+      "pressure": 1015,
+      "description": "clear sky",
+      "icon": "01d"
+    },
+    "tokyo": {
+      "name": "Tokyo",
+      "country": "JP",
+      "temp": 22,
+      "feelsLike": 24,
+      "humidity": 58,
+      "windSpeed": 4.1,
+      "pressure": 1009,
+      "description": "light rain",
+      "icon": "10d"
+    },
+    "new_york": {
+      "name": "New York",
+      "country": "US",
+      "temp": 12,
+      "feelsLike": 10,
+      "humidity": 68,
+      "windSpeed": 5.2,
+      "pressure": 1012,
+      "description": "overcast clouds",
+      "icon": "04d"
+    }
+  },
+
+  "pokemonData": {
+    "pikachu": {
+      "id": 25,
+      "name": "pikachu",
+      "height": 4,
+      "weight": 60,
+      "types": [
+        {
+          "type": {
+            "name": "electric"
+          }
+        }
+      ],
+      "sprites": {
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/25.png"
+      },
+      "stats": [
+        {
+          "stat": {
+            "name": "hp"
+          },
+          "base_stat": 35
+        },
+        {
+          "stat": {
+            "name": "attack"
+          },
+          "base_stat": 55
+        },
+        {
+          "stat": {
+            "name": "defense"
+          },
+          "base_stat": 40
+        },
+        {
+          "stat": {
+            "name": "special-attack"
+          },
+          "base_stat": 50
+        },
+        {
+          "stat": {
+            "name": "special-defense"
+          },
+          "base_stat": 50
+        },
+        {
+          "stat": {
+            "name": "speed"
+          },
+          "base_stat": 90
+        }
+      ]
+    },
+    "charizard": {
+      "id": 6,
+      "name": "charizard",
+      "height": 17,
+      "weight": 905,
+      "types": [
+        {
+          "type": {
+            "name": "fire"
+          }
+        },
+        {
+          "type": {
+            "name": "flying"
+          }
+        }
+      ],
+      "sprites": {
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/6.png"
+      },
+      "stats": [
+        {
+          "stat": {
+            "name": "hp"
+          },
+          "base_stat": 78
+        },
+        {
+          "stat": {
+            "name": "attack"
+          },
+          "base_stat": 84
+        },
+        {
+          "stat": {
+            "name": "defense"
+          },
+          "base_stat": 78
+        },
+        {
+          "stat": {
+            "name": "special-attack"
+          },
+          "base_stat": 109
+        },
+        {
+          "stat": {
+            "name": "special-defense"
+          },
+          "base_stat": 85
+        },
+        {
+          "stat": {
+            "name": "speed"
+          },
+          "base_stat": 100
+        }
+      ]
+    }
+  },
+
+  "spaceData": {
+    "apod": {
+      "title": "The Andromeda Galaxy",
+      "date": "2024-12-19",
+      "explanation": "The Andromeda Galaxy, also known as M31, is a spiral galaxy approximately 2.5 million light-years from Earth and is the nearest major galaxy to the Milky Way. This stunning image shows the galaxy's distinctive spiral structure with its bright central bulge and sweeping arms filled with star-forming regions. At magnitude 3.4, Andromeda is one of the most distant objects visible to the naked eye from Earth.",
+      "url": "https://apod.nasa.gov/apod/image/2312/M31_HubbleSpitzer_2048.jpg",
+      "media_type": "image",
+      "copyright": "NASA, ESA, Hubble Space Telescope"
+    },
+    "marsPhotos": [
+      {
+        "id": 102693,
+        "sol": 1000,
+        "camera": {
+          "name": "MAST",
+          "full_name": "Mast Camera"
+        },
+        "img_src": "https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/ccam/CR0_486265466EDR_F0481570CCAM01000M_.JPG",
+        "earth_date": "2015-05-30",
+        "rover": {
+          "name": "Curiosity"
+        }
+      },
+      {
+        "id": 102694,
+        "sol": 1000,
+        "camera": {
+          "name": "MAST",
+          "full_name": "Mast Camera"
+        },
+        "img_src": "https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/ccam/CR0_486265398EDR_F0481570CCAM01000M_.JPG",
+        "earth_date": "2015-05-30",
+        "rover": {
+          "name": "Curiosity"
+        }
+      }
+    ],
+    "nearEarthObjects": [
+      {
+        "name": "2023 DW",
+        "estimated_diameter": {
+          "meters": {
+            "estimated_diameter_min": 50.2,
+            "estimated_diameter_max": 112.3
+          }
+        },
+        "close_approach_data": [
+          {
+            "relative_velocity": {
+              "kilometers_per_hour": "24140.52"
+            },
+            "miss_distance": {
+              "kilometers": "1935696.12"
+            }
+          }
+        ],
+        "is_potentially_hazardous_asteroid": false
+      },
+      {
+        "name": "2024 ON",
+        "estimated_diameter": {
+          "meters": {
+            "estimated_diameter_min": 280.5,
+            "estimated_diameter_max": 610.8
+          }
+        },
+        "close_approach_data": [
+          {
+            "relative_velocity": {
+              "kilometers_per_hour": "33500.18"
+            },
+            "miss_distance": {
+              "kilometers": "988000.44"
+            }
+          }
+        ],
+        "is_potentially_hazardous_asteroid": false
+      }
+    ]
+  },
+
+  "quotesData": [
+    {
+      "content": "The only way to do great work is to love what you do.",
+      "author": "Steve Jobs",
+      "category": "inspirational"
+    },
+    {
+      "content": "Innovation distinguishes between a leader and a follower.",
+      "author": "Steve Jobs",
+      "category": "motivational"
+    },
+    {
+      "content": "Life is what happens to you while you're busy making other plans.",
+      "author": "John Lennon",
+      "category": "life"
+    },
+    {
+      "content": "The future belongs to those who believe in the beauty of their dreams.",
+      "author": "Eleanor Roosevelt",
+      "category": "inspirational"
+    },
+    {
+      "content": "It is during our darkest moments that we must focus to see the light.",
+      "author": "Aristotle",
+      "category": "wisdom"
+    },
+    {
+      "content": "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+      "author": "Winston Churchill",
+      "category": "success"
+    },
+    {
+      "content": "The only impossible journey is the one you never begin.",
+      "author": "Tony Robbins",
+      "category": "motivational"
+    },
+    {
+      "content": "In the middle of difficulty lies opportunity.",
+      "author": "Albert Einstein",
+      "category": "inspirational"
+    }
+  ],
+
+  "widgetTemplates": {
+    "weather": {
+      "name": "Weather Dashboard",
+      "description": "Real-time weather information for any city",
+      "icon": "🌤️",
+      "apis": ["OpenWeatherMap"],
+      "features": [
+        "Current weather conditions",
+        "Temperature unit conversion",
+        "Wind and humidity data",
+        "Pressure readings",
+        "Auto-refresh capability"
+      ],
+      "difficulty": "Beginner",
+      "estimatedTime": "30 minutes"
+    },
+    "pokemon": {
+      "name": "Pokemon Explorer",
+      "description": "Search and explore Pokemon data",
+      "icon": "🔴",
+      "apis": ["PokéAPI"],
+      "features": [
+        "Pokemon search by name/ID",
+        "Shiny form toggle",
+        "Detailed statistics",
+        "Type information",
+        "Random Pokemon discovery"
+      ],
+      "difficulty": "Beginner",
+      "estimatedTime": "45 minutes"
+    },
+    "space": {
+      "name": "NASA Space Explorer",
+      "description": "Explore space data from NASA",
+      "icon": "🚀",
+      "apis": ["NASA Open Data"],
+      "features": [
+        "Astronomy Picture of the Day",
+        "Mars Rover photos",
+        "Near Earth Objects",
+        "Multiple data sources",
+        "Educational content"
+      ],
+      "difficulty": "Intermediate",
+      "estimatedTime": "60 minutes"
+    },
+    "quotes": {
+      "name": "Daily Inspiration",
+      "description": "Motivational quotes and inspiration",
+      "icon": "💭",
+      "apis": ["Quotable"],
+      "features": [
+        "Random quote generation",
+        "Category filtering",
+        "Auto-refresh timer",
+        "Inspirational content",
+        "Author attribution"
+      ],
+      "difficulty": "Beginner",
+      "estimatedTime": "20 minutes"
+    }
+  },
+
+  "apiEndpoints": {
+    "weather": {
+      "base": "https://api.openweathermap.org/data/2.5",
+      "current": "/weather",
+      "forecast": "/forecast",
+      "keyRequired": true,
+      "freeLimit": "1000 calls/day",
+      "documentation": "https://openweathermap.org/api"
+    },
+    "pokemon": {
+      "base": "https://pokeapi.co/api/v2",
+      "pokemon": "/pokemon",
+      "species": "/pokemon-species",
+      "keyRequired": false,
+      "freeLimit": "No limit",
+      "documentation": "https://pokeapi.co/docs/v2"
+    },
+    "space": {
+      "base": "https://api.nasa.gov",
+      "apod": "/planetary/apod",
+      "mars": "/mars-photos/api/v1/rovers",
+      "neo": "/neo/rest/v1/feed",
+      "keyRequired": true,
+      "freeLimit": "1000 requests/hour",
+      "documentation": "https://api.nasa.gov/"
+    },
+    "quotes": {
+      "base": "https://quotable.io",
+      "random": "/random",
+      "search": "/quotes",
+      "keyRequired": false,
+      "freeLimit": "No limit",
+      "documentation": "https://github.com/lukePeavey/quotable"
+    }
+  },
+
+  "codeExamples": {
+    "basicWidget": "class SimpleWidget {\n  constructor(containerId, apiUrl) {\n    this.container = document.getElementById(containerId);\n    this.apiUrl = apiUrl;\n    this.init();\n  }\n\n  async init() {\n    this.render();\n    await this.loadData();\n  }\n\n  render() {\n    this.container.innerHTML = `\n      <div class=\"widget\">\n        <h3>My Widget</h3>\n        <div id=\"data\">Loading...</div>\n        <button onclick=\"this.refresh()\">Refresh</button>\n      </div>\n    `;\n  }\n\n  async loadData() {\n    try {\n      const response = await fetch(this.apiUrl);\n      const data = await response.json();\n      this.displayData(data);\n    } catch (error) {\n      this.showError(error.message);\n    }\n  }\n}",
+
+    "advancedWidget": "class AdvancedWidget extends SimpleWidget {\n  constructor(containerId, config) {\n    super(containerId, config.apiUrl);\n    this.config = config;\n    this.cache = new Map();\n    this.autoRefresh = config.autoRefresh || false;\n  }\n\n  // Caching mechanism\n  async loadData(useCache = true) {\n    const cacheKey = this.getCacheKey();\n\n    if (useCache && this.cache.has(cacheKey)) {\n      const cached = this.cache.get(cacheKey);\n      if (Date.now() - cached.timestamp < 300000) { // 5 min cache\n        this.displayData(cached.data);\n        return;\n      }\n    }\n\n    // Fetch new data\n    const data = await this.fetchData();\n    this.cache.set(cacheKey, {\n      data: data,\n      timestamp: Date.now()\n    });\n\n    this.displayData(data);\n  }\n\n  // Auto-refresh functionality\n  enableAutoRefresh(interval = 30000) {\n    this.refreshInterval = setInterval(() => {\n      this.loadData(false);\n    }, interval);\n  }\n}",
+
+    "widgetStyling": "/* Widget Container */\n.widget {\n  background: white;\n  border-radius: 12px;\n  padding: 20px;\n  box-shadow: 0 4px 20px rgba(0,0,0,0.1);\n  transition: transform 0.3s ease;\n}\n\n.widget:hover {\n  transform: translateY(-2px);\n}\n\n/* Loading States */\n.loading {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 40px;\n  color: #666;\n}\n\n.loading::before {\n  content: '';\n  width: 20px;\n  height: 20px;\n  border: 2px solid #f3f3f3;\n  border-top: 2px solid #3498db;\n  border-radius: 50%;\n  animation: spin 1s linear infinite;\n  margin-right: 10px;\n}\n\n/* Responsive Grid */\n.widget-grid {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\n  gap: 20px;\n  padding: 20px;\n}"
+  },
+
+  "troubleshooting": {
+    "corsErrors": {
+      "issue": "Cross-origin request blocked",
+      "solutions": [
+        "Use StackBlitz or local development server",
+        "Some APIs require server-side proxy for production",
+        "Check API documentation for CORS support"
+      ]
+    },
+    "apiKeys": {
+      "issue": "API requests failing with authentication errors",
+      "solutions": [
+        "Verify API key is correctly configured",
+        "Check if key needs activation time",
+        "Ensure correct API endpoint URLs",
+        "Verify key permissions and limits"
+      ]
+    },
+    "rateLimiting": {
+      "issue": "Too many requests error",
+      "solutions": [
+        "Implement request caching",
+        "Add delays between requests",
+        "Use free tier limits responsibly",
+        "Consider upgrading API plan"
+      ]
+    },
+    "loadingIssues": {
+      "issue": "Widgets not loading or slow performance",
+      "solutions": [
+        "Optimize API calls and data processing",
+        "Implement proper loading states",
+        "Use efficient DOM manipulation",
+        "Check network connectivity"
+      ]
+    }
+  },
+
+  "extensionIdeas": {
+    "beginner": [
+      "Add more widget themes",
+      "Implement widget favorites",
+      "Create sharing functionality",
+      "Add widget descriptions",
+      "Build preset configurations"
+    ],
+    "intermediate": [
+      "News feed widget",
+      "Cryptocurrency prices",
+      "GitHub repository explorer",
+      "Stock market tracker",
+      "Currency converter"
+    ],
+    "advanced": [
+      "Widget marketplace",
+      "Real-time data streaming",
+      "Collaborative editing",
+      "Analytics dashboard",
+      "Widget embedding system"
+    ]
+  }
+}

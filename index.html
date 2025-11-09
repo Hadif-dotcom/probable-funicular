@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Widget Builder - Reusable Components</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧩 API Widget Builder</h1>
+            <p>Build interactive widgets with real API data</p>
+        </header>
+
+        <div class="widget-selector">
+            <h2>Choose Your Widget Adventure</h2>
+            <div class="widget-options">
+                <div class="widget-option" data-widget="quotes">
+                    <div class="widget-icon">💭</div>
+                    <h3>Daily Inspiration</h3>
+                    <p>Random quotes and motivational content</p>
+                    <button class="btn btn-primary" onclick="loadWidget('quotes')">Get Inspired</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="widgetContainer" class="widget-container" style="display: none;">
+            <div class="widget-header">
+                <h2 id="widgetTitle">Widget Title</h2>
+                <div class="widget-controls">
+                    <button onclick="refreshWidget()" class="btn btn-secondary">🔄 Refresh</button>
+                    <button onclick="customizeWidget()" class="btn btn-customize">⚙️ Customize</button>
+                    <button onclick="closeWidget()" class="btn btn-danger">✕ Close</button>
+                </div>
+            </div>
+
+            <div id="widgetContent" class="widget-content">
+                <!-- Widget content will be dynamically loaded here -->
+            </div>
+
+            <div id="widgetConfig" class="widget-config" style="display: none;">
+                <h3>Widget Configuration</h3>
+                <div id="configControls">
+                    <!-- Configuration controls will be added dynamically -->
+                </div>
+                <div class="config-actions">
+                    <button onclick="applyConfig()" class="btn btn-primary">Apply Changes</button>
+                    <button onclick="resetConfig()" class="btn btn-secondary">Reset to Default</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Multi-Widget Dashboard -->
+        <div id="dashboard" class="dashboard" style="display: none;">
+            <div class="dashboard-header">
+                <h2>🎛️ Widget Dashboard</h2>
+                <div class="dashboard-controls">
+                    <button onclick="addWidgetToDashboard()" class="btn btn-primary">+ Add Widget</button>
+                    <button onclick="clearDashboard()" class="btn btn-outline">Clear All</button>
+                    <button onclick="exportDashboard()" class="btn btn-secondary">💾 Export</button>
+                </div>
+            </div>
+            <div id="dashboardGrid" class="dashboard-grid">
+                <!-- Multiple widgets will be placed here -->
+            </div>
+        </div>
+
+        <!-- Widget Templates (Hidden) -->
+        <div id="widgetTemplates" style="display: none;">
+
+            <!-- Daily Inspiration Widget Template -->
+            <div class="widget-template" data-widget="quotes">
+                <div class="quotes-widget">
+                    <div class="quotes-controls">
+                        <select data-id="quoteCategory" onchange="updateQuotes()">
+                            <option value="inspirational">Inspirational</option>
+                            <option value="motivational">Motivational</option>
+                            <option value="life">Life</option>
+                            <option value="success">Success</option>
+                        </select>
+                        <button onclick="getNewQuote()" class="btn btn-sm">New Quote</button>
+                    </div>
+                    <div data-id="quotesDisplay" class="quotes-display">
+                        <div class="loading">Loading inspirational quote...</div>
+                    </div>
+                    <div class="quotes-config">
+                        <label>
+                            <input type="checkbox" data-id="autoRefresh" onchange="toggleAutoRefresh()"> Auto-refresh every 30s
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Widget Creation Tutorial -->
+        <div class="tutorial-section">
+            <h2>🎓 Build Your Own Widget</h2>
+            <div class="tutorial-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Choose API</h3>
+                        <p>Select an API that provides interesting data (weather, news, images, etc.)</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Design Interface</h3>
+                        <p>Create HTML structure and CSS styling for your widget</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Connect API</h3>
+                        <p>Use fetch() to get data and handle loading/error states</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Add Interactivity</h3>
+                        <p>Enable user controls, refresh buttons, and customization options</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Code Examples -->
+        <div class="code-examples">
+            <h2>📝 Widget Creation Examples</h2>
+            <div class="code-tabs">
+                <button class="code-tab active" data-tab="basic">Basic Widget</button>
+                <button class="code-tab" data-tab="advanced">Advanced Features</button>
+                <button class="code-tab" data-tab="styling">Styling Tips</button>
+            </div>
+
+            <div class="code-content">
+                <div id="basic" class="code-panel active">
+                    <h3>Basic Widget Structure</h3>
+                    <pre><code>class SimpleWidget {
+  constructor(containerId, apiUrl) {
+    this.container = document.getElementById(containerId);
+    this.apiUrl = apiUrl;
+    this.init();
+  }
+
+  async init() {
+    this.render();
+    await this.loadData();
+  }
+
+  render() {
+    this.container.innerHTML = `
+      &lt;div class="widget"&gt;
+        &lt;h3&gt;My Widget&lt;/h3&gt;
+        &lt;div id="data"&gt;Loading...&lt;/div&gt;
+        &lt;button onclick="this.refresh()"&gt;Refresh&lt;/button&gt;
+      &lt;/div&gt;
+    `;
+  }
+
+  async loadData() {
+    try {
+      const response = await fetch(this.apiUrl);
+      const data = await response.json();
+      this.displayData(data);
+    } catch (error) {
+      this.showError(error.message);
+    }
+  }
+}</code></pre>
+                </div>
+
+                <div id="advanced" class="code-panel">
+                    <h3>Advanced Widget Features</h3>
+                    <pre><code>class AdvancedWidget extends SimpleWidget {
+  constructor(containerId, config) {
+    super(containerId, config.apiUrl);
+    this.config = config;
+    this.cache = new Map();
+    this.autoRefresh = config.autoRefresh || false;
+  }
+
+  // Caching mechanism
+  async loadData(useCache = true) {
+    const cacheKey = this.getCacheKey();
+
+    if (useCache && this.cache.has(cacheKey)) {
+      const cached = this.cache.get(cacheKey);
+      if (Date.now() - cached.timestamp < 300000) { // 5 min cache
+        this.displayData(cached.data);
+        return;
+      }
+    }
+
+    // Fetch new data
+    const data = await this.fetchData();
+    this.cache.set(cacheKey, {
+      data: data,
+      timestamp: Date.now()
+    });
+
+    this.displayData(data);
+  }
+
+  // Auto-refresh functionality
+  enableAutoRefresh(interval = 30000) {
+    this.refreshInterval = setInterval(() => {
+      this.loadData(false);
+    }, interval);
+  }
+}</code></pre>
+                </div>
+
+                <div id="styling" class="code-panel">
+                    <h3>Widget Styling Best Practices</h3>
+                    <pre><code>/* Widget Container */
+.widget {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.widget:hover {
+  transform: translateY(-2px);
+}
+
+/* Loading States */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  color: #666;
+}
+
+.loading::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: 10px;
+}
+
+/* Responsive Grid */
+.widget-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
